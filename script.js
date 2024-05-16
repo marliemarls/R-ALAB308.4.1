@@ -7,7 +7,7 @@ function loopThruStrings(str) {
     for(let i = 0; i <= str.length; i++) {
 
         let newStr = '';
-        if( str[i] !== "'\n'"){
+        if( str[i] !== "\n"){
             newStr += str[i]
             console.log(newStr)
             // newArray.push(newStr)
@@ -26,4 +26,4 @@ function loopThruStrings(str) {
 // }
 
 console.log(loopThruStrings(str))
-console.log(loopThruStrings(newStr))
+// console.log(loopThruStrings(newStr))
