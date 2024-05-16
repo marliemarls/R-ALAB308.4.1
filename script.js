@@ -22,28 +22,37 @@ let newStr = "\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.
 // not really sure if im doing this right 
 function loopThruStrings(str){
     let splitArr = str.split("\n");
-    return splitArr
-}
-
-let newSplitArr = loopThruStrings(str)
-// console.log(newSplitArr)
-
-function createArr(arr) {
     let arrays = []
-    for(let i = 0; i < arr.length-1; i++){
-        const newArr = [arr[i]]
+    for(let i = 0; i < splitArr.length-1; i++){
+        const newArr = [splitArr[i]]
         arrays.push(newArr)
-        // console.log(newArr)
     }
     return arrays
 }
 
-const nestedArr = createArr(newSplitArr)
+let newSplitArr = loopThruStrings(str)
+console.log(newSplitArr)
 
-const cell1 = nestedArr[0]
-const cell2 = nestedArr[1]
-const cell3 = nestedArr[2]
-const cell4 = nestedArr[3]
 
-console.log(nestedArr[1])
-// console.log(loopThruStrings(newStr))
+
+// function createArr(arr) {
+//     let arrays = []
+//     for(let i = 0; i < arr.length-1; i++){
+//         const newArr = [arr[i]]
+//         arrays.push(newArr)
+//         // console.log(newArr)
+//     }
+//     return arrays
+// }
+
+// const nestedArr = createArr(newSplitArr)
+
+// const cell1 = nestedArr[0]
+// const cell2 = nestedArr[1]
+// const cell3 = nestedArr[2]
+// const cell4 = nestedArr[3]
+
+// console.log(nestedArr[1])
+// // console.log(loopThruStrings(newStr))
+
+// let colVariable;
