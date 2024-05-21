@@ -21,15 +21,4 @@ console.log(nestedArray)
 
 let newKeys = nestedArr[0]
 
-function changeKeys(obj, arr) {
-    const newObj = {}
-    const keys = Object.keys(obj)
-    keys.forEach((oldKey, index) => {
-        let newKey = arr[index] || oldKey;
-        newObj[newKey] = obj[oldKey]
-    })
-    return newObj
-}
-//screaming crying throwing up 
-
-console.log(changeKeys(str, newKeys))
+let newObj = {}
