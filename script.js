@@ -5,9 +5,10 @@ let newStr = "\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.
 
 function nestedArr(str) {
     let splitArr = str.split("\n")
+    console.log()
     let arrays = []
     for(let i = 0; i < splitArr.length; i++){
-        const newArr = [splitArr[i]]
+        const newArr = splitArr[i].split(",")
         arrays.push(newArr)
         // console.log(newArr)
     }
@@ -18,10 +19,3 @@ function nestedArr(str) {
 let nestedArray = nestedArr(str)
 console.log(nestedArray)
 
-// let nestedArr = loopThruStrings(str)
-// let arrColumns = nestedArr[0].length
-
-// console.log(nestedArr, arrColumns)
-
-
-// let colVariable;
