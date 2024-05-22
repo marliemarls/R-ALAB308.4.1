@@ -58,5 +58,21 @@ function createObject (arr) {
     return newArr
 }
 
-console.log(createObject(nestedArr(str)))
+let createdObjectArray = createObject(nestedArr(str)) 
 
+console.log(createdObjectArray)
+
+//part 4 sorting and manipulating data: 
+
+createdObjectArray.pop()
+console.log(createdObjectArray)
+
+createdObjectArray.splice(1, 0, { ID: "48", Name: "Barry", Occupation: "Runner", Age: "25" });
+
+console.log(createdObjectArray)
+
+createdObjectArray.push({ ID: "7", Name: "Bilbo", Occupation: "None", Age: "111" })
+
+console.log(createdObjectArray)
+
+//
