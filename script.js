@@ -16,9 +16,47 @@ function nestedArr(str) {
 }
 
 
-let nestedArray = nestedArr(str)
-console.log(nestedArray)
+// let nestedArray = nestedArr(str)
+// console.log(nestedArray)
 
-let newKeys = nestedArr[0]
+// let newKeys = nestedArr[0]
 
-let newObj = {}
+// let newObj = Object.assign({}, newKeys);
+// console.log(newObj)
+
+function createObject (arr) {
+    //created variables that will hold the key names, an empty object, and an empty array. 
+    //these variables will be used later on 
+    
+    let keys = arr[0] 
+    let newObj = {};
+    let newArr = []
+
+    //i am creating two for loops because I am working with a nested array (an array that holds other arrays)
+    //the first for loop will be use to iterate through the entire nested array
+    //iteration begins at the second element ([1]) because the first ([0]) is the key names and we dont want to grab that information
+    for(let i = 1; i <= arr.length-1; i++) {
+        // console.log(arr[i])
+        //the second for loop will be used to iterate through the arrays within the nested array (the elements in arr)
+        //this iteration will begin at 0 this time because we are now working within the nested arrays and need to grab all the elements as they represent the value property
+        //i created the variable index within the first loop to hold the current iteration of the first loop .length-1 so that within my next loop, i will use index as my array to iterate through
+        let index = arr[i].length-1;
+        for(let j = 0; j <= index; j++) {
+            //now that i'm iterating through the elements, I want to create a variable to hold the first array in the nested array so i created the key variable to hold keys[j] to hold the first element in the nested array 
+            //created a value variable that is grabbing the elements of the nested array and then at the same time grabbing the current iteration of both loops
+            let key = keys[j];
+            let value = arr[i][j];
+            //now i can grab the newObj variable to implement the key and value pairs
+            newObj[key] = value; 
+        }
+        //outside of the inner loop, i will push the objects into the newArr that I created in the beginnig of the function
+        //once i push the newObj, I can reset the value to an empty object so that we can continue using the obj variable to push the others into the array
+        newArr.push(newObj)
+        newObj = {}
+    }
+    //now we can return the newArr
+    return newArr
+}
+
+console.log(createObject(nestedArr(str)))
+
