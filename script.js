@@ -75,4 +75,5 @@ createdObjectArray.push({ ID: "7", Name: "Bilbo", Occupation: "None", Age: "111"
 
 console.log(createdObjectArray)
 
-//
+//part 5: full circle
+
