@@ -16,13 +16,8 @@ function nestedArr(str) {
 }
 
 
-// let nestedArray = nestedArr(str)
-// console.log(nestedArray)
+let nestedArray = nestedArr(str)
 
-// let newKeys = nestedArr[0]
-
-// let newObj = Object.assign({}, newKeys);
-// console.log(newObj)
 
 function createObject (arr) {
     //created variables that will hold the key names, an empty object, and an empty array. 
@@ -75,5 +70,5 @@ createdObjectArray.push({ ID: "7", Name: "Bilbo", Occupation: "None", Age: "111"
 
 console.log(createdObjectArray)
 
-//part 5: full circle
+//part 5: full circle (are we supposed to do this part??)
 
